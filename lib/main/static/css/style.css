@@ -1,0 +1,58 @@
+/* Оформление заголовков */
+h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+/* Оформление кнопок */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Оформление формы */
+form {
+  margin: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+input[type="file"] {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Оформление списка книг */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+li a {
+  font-weight: bold;
+}
+
+li small {
+  color: #999;
+}

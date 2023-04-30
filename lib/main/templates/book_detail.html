@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ book.title }}</h1>
+  <p>Автор: {{ book.author }}</p>
+  <p>Издатель: {{ book.publisher }}</p>
+  <p>Дата публикации: {{ book.publication_date }}</p>
+  <a href="{% url 'book_edit' book.id %}">Редактировать</a>
+
+  {% if book.post_photo %}
+    <img src="{{ book.post_photo.url }}" alt="{{ book.title }}" width="200px">
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Обновить</button>
+  </form>
+{% endblock %}

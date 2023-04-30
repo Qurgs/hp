@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Authors List</h1>
+  <ul>
+    {% for author in authors %}
+      <li>{{ author.name }} ({{ author.email }})</li>
+    {% empty %}
+      <li>No authors yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

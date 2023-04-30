@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Список книг</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Автор</th>
+        <th>Издатель</th>
+        <th>Дата публикации</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for book in books %}
+        <tr>
+          <td><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a></td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.publisher }}</td>
+          <td>{{ book.publication_date }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="4">Нет книг.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
